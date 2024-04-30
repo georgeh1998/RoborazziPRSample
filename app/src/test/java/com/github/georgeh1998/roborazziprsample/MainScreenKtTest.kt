@@ -5,6 +5,7 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onRoot
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.github.georgeh1998.roborazziprsample.ui.theme.RoborazziPRSampleTheme
+import com.github.takahirom.roborazzi.DEFAULT_ROBORAZZI_OUTPUT_DIR_PATH
 import com.github.takahirom.roborazzi.captureRoboImage
 import org.junit.Rule
 import org.junit.Test
@@ -26,7 +27,9 @@ class MainScreenTest {
                 MainScreen()
             }
         }
-        composeRule.onRoot().captureRoboImage()
+        composeRule.onRoot().captureRoboImage(
+            filePath = "$DEFAULT_ROBORAZZI_OUTPUT_DIR_PATH/MainScreen.png",
+        )
     }
 
 }
