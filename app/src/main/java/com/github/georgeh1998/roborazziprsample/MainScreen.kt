@@ -11,7 +11,7 @@ fun MainScreen() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        repeat(13) {
+        repeat(15) {
             Text(text = "Text $it")
         }
     }
