@@ -7,11 +7,13 @@ on:
       - release/*
       - topic/*
   pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
 
 permissions: {}
 
 jobs:
   store-screenshot-test:
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -47,20 +49,4 @@ jobs:
           name: screenshot
           path: |
             **/build/outputs/roborazzi
-          retention-days: 30
-
-      - uses: actions/upload-artifact@v4
-        if: ${{ always() }}
-        with:
-          name: screenshot-reports
-          path: |
-            **/build/reports
-          retention-days: 30
-
-      - uses: actions/upload-artifact@v4
-        if: ${{ always() }}
-        with:
-          name: screenshot-test-results
-          path: |
-            **/build/test-results
           retention-days: 30
