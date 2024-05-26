@@ -3,7 +3,7 @@ name: end
 on:
   workflow_run:
     workflows:
-      - start 123
+      - Android CI - on push
     types:
       - completed
 
