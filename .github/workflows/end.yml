@@ -3,7 +3,7 @@ name: end
 on:
   workflow_run:
     workflows:
-      - start
+      - start123
     types:
       - completed
 
