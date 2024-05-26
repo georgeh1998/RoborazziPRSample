@@ -18,8 +18,4 @@ jobs:
 
     steps:
       - name: end
-        run: |
-          echo "------end starts------"
-          sleep 30
-          echo "------end ends------"
-        
+        run: echo "------end------"

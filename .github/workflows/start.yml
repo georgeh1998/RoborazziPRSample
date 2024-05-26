@@ -29,4 +29,7 @@ jobs:
     needs: [start1]
     steps:
       - name: Start2
-        run: echo "------Start2------"
+        run: |
+          echo "------Start2 starts------"
+          sleep 15
+          echo "------Start2 ends------"
