@@ -17,4 +17,16 @@ jobs:
 
     steps:
       - name: Start
-        run: echo "------Start1------"
+        run: |
+          echo "------Start1 starts------"
+          sleep 30
+          echo "------Start1 ends------"
+
+  start2:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [start1]
+    steps:
+      - name: Start2
+        run: echo "------Start2------"
