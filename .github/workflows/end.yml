@@ -3,7 +3,7 @@ name: end
 on:
   workflow_run:
     workflows:
-      - Android CI - on push
+      - Android CI - on pull_request
     types:
       - completed
 
