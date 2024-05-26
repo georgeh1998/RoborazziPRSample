@@ -1,4 +1,4 @@
-name: start123
+name: start 123
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Start
         run: |
           echo "------Start1 starts------"
-          sleep 30
+          sleep 10
           echo "------Start1 ends------"
 
   start2:
@@ -31,5 +31,5 @@ jobs:
       - name: Start2
         run: |
           echo "------Start2 starts------"
-          sleep 15
+          sleep 10
           echo "------Start2 ends------"
