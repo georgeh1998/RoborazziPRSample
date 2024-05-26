@@ -1,0 +1,20 @@
+name: start
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+
+jobs:
+  start1:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+
+    steps:
+      - name: Start
+        run: echo "------Start1------"
